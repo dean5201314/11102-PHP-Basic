@@ -46,9 +46,11 @@ if ($score >= 0 && $score <= 59) {
 // } else {
 //     $level = 'E';
 // }
+
 // $level = "B";
 echo "成績等級為 " . $level;
 echo "<br>";
+
 switch ($level) {
     case 'R':
         echo "成績有誤，請洽老師處裡~";
@@ -70,3 +72,5 @@ switch ($level) {
         echo "是否無心學業?";
         break;
 }
+
+?>
