@@ -49,4 +49,33 @@ if ($flag==true){
     echo $a."不是質數";
 }
 echo "<hr>";
+
+?>
+
+<h3>陣列</h3>
+
+<?php
+echo 'array $a';
+echo "<br>";
+$a=['甲','乙','丙','丁','戊'];
+for($i=0;$i<count($a);$i++){
+    echo $a[$i];
+}
+echo "<hr>";
+
+
+echo 'foreach $a,$b';
+echo "<br>";
+foreach($a as $b){
+    echo $b;
+}
+echo "<hr>";
+
+echo 'foreach $a,$idx,$b';
+echo "<br>";
+foreach($a as $idx=>$b){
+    echo $idx."=>".$b;
+    echo "<br>";
+}
+
 ?>
