@@ -1,5 +1,6 @@
 <?php
 
+/*
 $cl_score[0][0]='名稱';
 $cl_score[0][1]='國文';
 $cl_score[0][2]='英文';
@@ -43,8 +44,6 @@ $cl_score[5][3]='80';
 $cl_score[5][4]='62';
 $cl_score[5][5]='64';
 
-
-
 echo "<br>";
 print_r($cl_score[0]);
 echo "<br>";
@@ -57,6 +56,44 @@ echo "<br>";
 print_r($cl_score[4]);
 echo "<br>";
 print_r($cl_score[5]);
+echo "<br>";
+*/
+?>
+
+<h2>利用程式產生陣列</h2>
+
+<?php
+$nine=[];
+
+for ($j=1; $j <= 9 ; $j++) {
+
+    for ($i=1; $i <= 9 ; $i++) { 
+        $nine[]="$j * $i = ".($j * $i);
+    }
+}
+
+// print_r($nine);
+
+foreach ($nine as $idx => $value) {
+    echo $value."&nbsp;&nbsp;&nbsp;";
+    if ($idx%9==8) {
+        echo "<br>";
+    } 
+}
+
+echo "<table>";
+echo "<tr>";
+foreach ($nine as $idx => $value) {
+    if ($idx%9==0) {
+        echo "<tr>";
+    } 
+    echo "<td>";
+    echo $value."&nbsp;&nbsp;&nbsp;";
+    echo "</td>";
+    if ($idx%9==8) {
+        echo "</tr>";
+    } 
+}
 echo "<br>";
 
 ?>
