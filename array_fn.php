@@ -6,6 +6,7 @@ $score=[
     '成績'=>98
 ];
 
+
 /*
 if (in_array(22,$array)) {
     echo "數字有在陣列中";
