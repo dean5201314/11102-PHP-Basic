@@ -81,6 +81,19 @@ foreach ($nine as $idx => $value) {
     } 
 }
 
+?>
+<style>
+    table{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    table td{
+        border:1px solid #666;
+        padding:5px 9px;
+    }
+</style>
+<?php
+/*
 echo "<table>";
 echo "<tr>";
 foreach ($nine as $idx => $value) {
@@ -95,5 +108,22 @@ foreach ($nine as $idx => $value) {
     } 
 }
 echo "<br>";
+*/
+
+echo "<table>";
+foreach($nine as $idx => $value){
+   // echo $value;
+    if($idx%9==0) {
+       
+       echo "<tr>
+                <td>$value</td>";
+        }else if($idx%9==8){
+           echo "<td>$value</td>
+            </tr>";
+        }else{
+           echo "<td>$value</td>";
+        }
+}
+echo "</table>";
 
 ?>
